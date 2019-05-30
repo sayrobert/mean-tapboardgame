@@ -1,0 +1,8 @@
+<h2>Score table</h2>
+
+<ul class="scores">
+    <li class="scores-item" *ngFor="let score of scores">
+        <div class="score">{{score.score}} points</div>
+        <div class="details">{{score.userId}} / {{ score.date | date :'dd/MM/yyyy hh:mm:ss' }}</div>
+    </li>
+</ul>

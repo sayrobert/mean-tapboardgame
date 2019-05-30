@@ -1,0 +1,10 @@
+<h2>Hello {{gamerId}} !</h2>
+
+<p>Nombre de clics effectués en 10s : {{score}}</p>
+<p>Temps restant : {{time}}s</p>
+<div class="state state-{{ time }}"></div>
+
+<div class="game">
+    <img src="assets/images/tapOff.png" alt="" (click)="tap()" *ngIf="isOdd">
+    <img src="assets/images/tapOn.png" alt="" (click)="tap()" *ngIf="!isOdd">
+</div>
