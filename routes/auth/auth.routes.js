@@ -10,7 +10,7 @@ Imports
     const Vocabulary = require('../../services/vocabulary.service');
     const { sendBodyError, sendFieldsError, sendApiSuccessResponse, sendApiErrorResponse } = require('../../services/response.service');
     const { checkFields } = require('../../services/request.service');
-    const { register, confirmIdentity, login, setPassword, logout } = require('./auth.controller');
+    const { register, confirmIdentity, login, setPassword } = require('./auth.controller');
 //
 
 /*

@@ -173,7 +173,6 @@ Export
         register,
         confirmIdentity,
         login,
-        setPassword,
-        logout
+        setPassword
     }
 //
