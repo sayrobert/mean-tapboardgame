@@ -166,14 +166,6 @@ Methods
         });
     };
 
-    /**
-     * Logout user
-     * @param body: Object => email: String, password: String
-    */
-    const logout = () => {
-        cookies.set('process.env.COOKIE_NAME', {maxAge: Date.now()});
-    };
-
 /*
 Export
 */
