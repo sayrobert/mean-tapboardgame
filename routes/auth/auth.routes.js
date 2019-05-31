@@ -133,10 +133,15 @@ Routes definition
                 };
             });
 
-            authRouter.get( '/logout', this.passport.authenticate('jwt', { session: false }), (req, res) => {
-                logout()
-                .then( apiResponse => sendApiSuccessResponse(res, Vocabulary.request.success, apiResponse) )
-                .catch( apiResponse => sendApiErrorResponse(res, Vocabulary.request.error, apiResponse) );
+            authRouter.get('/logout', function(req, res){
+                cookie = req.cookies;
+                for (var prop in cookie) {
+                    if (!cookie.hasOwnProperty(prop)) {
+                        continue;
+                    }    
+                    res.cookie(prop, '', {expires: new Date(0)});
+                }
+                res.redirect('/');
             });
         };
 
