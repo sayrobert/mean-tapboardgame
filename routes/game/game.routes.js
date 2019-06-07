@@ -49,13 +49,13 @@ Routes definition
 
             // Route for getting all score
             classRouter.get( '/all', (req, res) => {
-                return getAllScores()
+                    getAllScores()
                     .then( apiResponse => sendApiSuccessResponse(res, Vocabulary.request.success, apiResponse) )
                     .catch( apiResponse => sendApiErrorResponse(res, Vocabulary.request.error, apiResponse))
             });
 
             // Route for testing
-            classRouter.get('/', function (req, res) {
+            classRouter.get('/', (req, res) => {
                 res.send('GET request to the homepage');
             });
         };
